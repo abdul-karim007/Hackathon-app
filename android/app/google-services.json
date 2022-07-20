@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "97220867331",
+    "project_id": "hackathon-ecom-app",
+    "storage_bucket": "hackathon-ecom-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97220867331:android:d95f1923257fe4f24f6536",
+        "android_client_info": {
+          "package_name": "com.example.hackathonapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "97220867331-qmk4nssmu0234t0dc55ith0027u6a2ao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwi2D_t96osm6FA7BZi-lsudeIARHK2Iw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "97220867331-qmk4nssmu0234t0dc55ith0027u6a2ao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
