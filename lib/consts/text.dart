@@ -6,12 +6,12 @@ class CustomText {
   static String text5 = 'exploring the';
   static String text6 = 'new range of winter fashion wear';
   static String text7 = 'Shop Now';
-  static String text8 = 'No2';
+  static String text8 = 'No 2';
   static String text9 = 'Jimmy Chuka';
   static String text10 = 'exploring new Spring';
   static String text11 = 'sweater collection';
   static String text12 = 'Christain Lobi';
-  static String text13 = 'Showing us his new';
+  static String text13 = 'Showing us his new summer beach wears';
   static String text14 = 'summer beach wears';
   static String text15 = 'No 3';
   static String text16 = 'Continue with Instagram';

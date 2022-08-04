@@ -124,6 +124,7 @@
 //   }
 // }
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hackathonapp/consts/color.dart';
 import 'package:hackathonapp/consts/img.dart';
@@ -178,7 +179,8 @@ class _CartState extends State<Cart> {
       ),
       Expanded(
         child: FutureBuilder<QuerySnapshot>(
-          future: addToCart.get(),
+          future: 
+          addToCart.where('email', isEqualTo: FirebaseAuth.instance.currentUser?.email).get(),
           builder: (context, snapshot) {
             if (snapshot.hasData) {
               return ListView(
@@ -192,7 +194,10 @@ class _CartState extends State<Cart> {
                 );
               }).toList());
             } else {
-              return Center(child: CircularProgressIndicator( color: Color(CustomColors.splashColor),));
+              return Center(
+                  child: CircularProgressIndicator(
+                color: Color(CustomColors.splashColor),
+              ));
             }
           },
         ),

@@ -9,7 +9,7 @@ import 'package:hackathonapp/pages/loginPage.dart';
 import 'package:hackathonapp/pages/prodDetail.dart';
 import 'package:like_button/like_button.dart';
 
-customGFbutton(text1, context) {
+customGFbutton(t1, context) {
   return Positioned(
     bottom: MediaQuery.of(context).size.height * .1,
     left: MediaQuery.of(context).size.width * .13,
@@ -26,7 +26,7 @@ customGFbutton(text1, context) {
               MaterialPageRoute(builder: (context) => Login()),
             );
           },
-          text: text1,
+          text: t1,
           type: GFButtonType.outline2x,
         ),
       ),
@@ -243,14 +243,78 @@ likeit(bool isFavorite) {
   CollectionReference addToCart =
       FirebaseFirestore.instance.collection('Add to Cart');
 
-  Future<void> addcart(text1, text2, context) {
+  Future<void> addcart(t1, t2, context) {
     return addToCart
         .add({
-          'Product name': text1,
-          'Product price': text2,
+          'Product name': t1,
+          'Product price': t2,
           
         })
         .then((value) => customDia(context, 'Added to Cart'))
         .catchError((error) => print("Failed to add user: $error"));
   }
 
+onBoarding(context, img, t1, t2, t3, t4, t5, t6, t7){
+ return Stack(
+            children: [
+              Image(
+                fit: BoxFit.cover,
+                image: AssetImage(img),
+                width: MediaQuery.of(context).size.width,
+              ),
+              Positioned(
+                left: MediaQuery.of(context).size.width * .03,
+                bottom: MediaQuery.of(context).size.height * .18,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      t1,
+                      style: TextStyle(
+                          fontFamily: CustomText.abril,
+                          fontSize: 40,
+                          color: Colors.white),
+                    ),
+                    Text(
+                      t2,
+                      style: TextStyle(
+                          color: Color(CustomColors.splashColor),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 30),
+                    ),
+                    Text(
+                      t3,
+                      style: TextStyle(
+                          fontFamily: CustomText.abril,
+                          fontSize: 40,
+                          color: Colors.white),
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          t4,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontSize: 20),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 5.0),
+                          child: Text(
+                            t5,
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                        ),
+                      ],
+                    ),
+                    Text(
+                      t6,
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                  ],
+                ),
+              ),
+              customGFbutton(t7, context)
+            ],
+          );
+}

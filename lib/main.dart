@@ -1,8 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hackathonapp/consts/text.dart';
 import 'package:hackathonapp/firebase_options.dart';
+import 'package:hackathonapp/pages/onboarding.dart';
 import 'package:hackathonapp/pages/splash.dart';
 
 void main() async {
